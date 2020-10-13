@@ -3,9 +3,9 @@
 {% block body %}
   <h1>{{ category }}</h1>
 
-  {% listings.count == 0 %}
+  {% if  listings.count == 0 %}
     <p>There are no listings in this category</p>
-  {% %}
+  {% endif %}
   
   {% for listing in listings %}
     <div class="container border p-2 m-2">
